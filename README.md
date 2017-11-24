@@ -1,4 +1,4 @@
-## Web Services for SIGOS APPEx Monitoring Data
+# Web Services for SIGOS APPEx Monitoring Data
 
 # Method: establish-api-session
 
@@ -109,36 +109,7 @@ http://{access-server-hostname}:6232/resource/monitor/{sessionID}/get-monitor-re
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
-| id | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:28:00&#39;NB
-NOTE: &#39;Of?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Each record for the method, database table.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Unique ID
- |
+| id | Integer | Unique ID |
 | customerId | Integer | Customer ID |
 | monitorName | String | Monitor name |
 | startTime | DateTime | Start date and time of monitor execution |
@@ -147,93 +118,8 @@ Unique ID
 | carrier | String | Device carrier |
 | totalRunTime | Long | Total time the monitor took to complete this particular run |
 | resultData | Boolean | Always set to &quot;true&quot; |
-| countSuccess | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:30:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;Of run? Of Monitor?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Ignore, we do not use it anymore but it is still in database. Effects of old monitoring releases we had.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Index of success
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:28:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;If not success? Parameter not returned?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Ignore, we do not use it anymore…..&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-1 if success
- |
-| countFailure | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:31:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Of run? Of monitor?&#39;
-NOTE: &#39;How is this different from count\_exception?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Ignore, we do not use it anymore……&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Index of failure
-1 if failure |
+| countSuccess | Integer | Index of success1 if success |
+| countFailure | Integer | Index of failure1 if failure |
 | countSLA | Integer | If a transaction in the run failed, 1, else 0 |
 | countException | Integer | If the run failed, index of that failure, i.e., 1st failure, 2nd failure, etc. |
 | deviceIds | String | ID of device (not MCD) |
@@ -241,36 +127,7 @@ Index of failure
 | deviceCarriers | String | Device carrier |
 | deviceLocations | String | Device location |
 | descriptionOfResult | String | Result description (what you have provided in the script result description field) |
-| scriptReturnCode | String |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:32:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Specific runs of the monitor? &#39;
-NOTE: &#39;How is this different from count\_success, count\_failure, count\_exception?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;This is for each monitor run. Success, Fail or error.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Indicates if the monitor was Success or Fail
- |
+| scriptReturnCode | String | Indicates if the monitor was Success or Fail |
 | validResult | Boolean | true/false to flag if result is invalid |
 | excluded | Boolean | true/false to remove and exclude the result |
 | datasetValue | String | Not currently implemented.(SIGOS APPEx Monitoring 4.2 had a feature in which Monitor could be run with a
@@ -306,35 +163,7 @@ http://{access-server-hostname}:6232/resource/monitor/{sessionID}/get-monitor-re
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
-| id | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:28:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Of?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Of particular record of the method/database table.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Unique ID
- |
+| id | Integer | Unique ID |
 | customerId | Integer | Customer ID |
 | projectId | Integer | Project ID |
 | testScheduleId | Integer | Monitor ID |
@@ -342,35 +171,7 @@ Unique ID
 | policyName | String | Incident policy name |
 | policyType | String | Policy type as defined in Studio |
 | policyDescription | String | Policy description |
-| startMonitorResultId | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:47:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Meaning? The ID changes when policy ends?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Yes.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-ID of the monitor when the policy was started
- |
+| startMonitorResultId | Integer | ID of the monitor when the policy was started |
 | startTime | DateTime | Date/time of the monitor when the policy was started |
 | endMonitorResultId | Integer | ID of the monitor when the policy was ended |
 | endTime | DateTime | Date/time of the monitor when the policy was ended |
@@ -399,35 +200,7 @@ Data of the timers within the monitor
 
 | **Parameter** | **Type** | **Description** |
 | --- | --- | --- |
-| id | Integer |
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T21:28:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Of?&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;Each record for the method, database table.&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;]
-Unique ID
- |
+| id | Integer | Unique ID |
 | customerIid |   | Customer ID |
 | monitorResultId  | Integer | ID of the monitor result to which this transaction result belongs. |
 | startTime | DateTime | Start date and time of transaction result |
@@ -437,35 +210,7 @@ Unique ID
 | value | Decimal | Value of the timer (time taken to complete the transaction in the units above) |
 | validResult | Boolean | true/false to flag result if invalid |
 | thresholdValue | Integer | Threshold defined for the timer |
-| thresholdConditionId | Integer | 1 = Fail if timer &lt; threshold value, 2 = if timer is &gt; threshold value,
-
-#
-[ANNOTATION:
-
-BY &#39;Nandini Balakrishna&#39;
-ON &#39;2016-03-16T22:01:00&#39;NB
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;??? Please clarify&#39;
-NOTE: &#39;&#39;
-NOTE: &#39;I don&#39;t understand, the description is already there?&#39;]
-3 -&gt; ==, 4 &lt;=, 5 -&gt; &gt;=
- |
+| thresholdConditionId | Integer | 1 = Fail if timer &lt; threshold value, 2 = if timer is &gt; threshold value, 3 -&gt; ==, 4 &lt;=, 5 -&gt; &gt;= |
 | thresholdBreached | Boolean | true/false to indicate if the transaction threshold value was breached |
 | transactionFailed | Boolean | true/false to indicate if transaction failed |
 | monitorName | String | Monitor name |
